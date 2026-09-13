@@ -1,4 +1,4 @@
-# Enterprise Identity & Access Management — Microsoft Entra ID
+# Enterprise Identity & Access Management - Microsoft Entra ID
 
 A hands-on identity governance project built in Microsoft Entra ID, simulating how a real organization (NimbusCorp) manages who has access to what. Covers user lifecycle, group-based access, conditional access, SSO, privileged access, and access reviews.
 
