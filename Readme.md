@@ -19,7 +19,7 @@ Design and document an end-to-end enterprise identity environment that mirrors r
 | 1 | Users & Directory Structure | Done |
 | 2 | Group-Based Access (assigned) | Done |
 | 3 | Dynamic Groups | Done |
-| 4 | Conditional Access Policies | Done |
+| 4 | Conditional Access Policies | Done (report-only) |
 | 5 | SAML SSO Integration | in progress |
 | 6 | Privileged Identity Management (PIM) | in progess |
 | 7 | Access Reviews | in progress |
