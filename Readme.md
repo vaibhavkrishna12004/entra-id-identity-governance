@@ -18,24 +18,13 @@ Design and document an end-to-end enterprise identity environment that mirrors r
 |---|-----------|--------|
 | 1 | Users & Directory Structure | Done |
 | 2 | Group-Based Access (assigned) | Done |
-| 3 | Dynamic Groups | Planned (requires Entra ID P2) |
-| 4 | Conditional Access Policies | Planned (requires Entra ID P2) |
-| 5 | SAML SSO Integration | In progress |
-| 6 | Privileged Identity Management (PIM) | Planned (requires Entra ID P2) |
-| 7 | Access Reviews | Planned (requires Entra ID P2) |
-| 8 | Joiner-Mover-Leaver (JML) Lifecycle | Planned |
+| 3 | Dynamic Groups | Done |
+| 4 | Conditional Access Policies | Done |
+| 5 | SAML SSO Integration | in progress |
+| 6 | Privileged Identity Management (PIM) | in progess |
+| 7 | Access Reviews | in progress |
+| 8 | Joiner-Mover-Leaver (JML) Lifecycle | in progress |
 
-## Progress
-
-### Users & Directory Structure
-Created a directory of 6 users spanning 5 departments, each with job title and department attributes set — the foundation for group-based and attribute-based access control.
-
-### Group-Based Access
-Created a security group (Finance-Team) with assigned membership, demonstrating how access is granted to groups rather than individuals so that permissions scale with the organization.
-
-## Roadmap
-
-The remaining components (dynamic groups, conditional access, PIM, access reviews) build on Entra ID P2 features and will be added as the project progresses.
 
 ## Screenshots
 
