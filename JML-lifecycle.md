@@ -13,7 +13,7 @@ This is the stage organizations quietly get wrong. When someone changes role, th
 What I built handles the core of this automatically: change a user's department attribute and they drop out of their old dynamic group and into the new one old access gone, new access granted, no manual step. But dynamic groups only catch attribute-driven access. That's exactly why I set up Access Reviews — the periodic recertification that forces someone to look at group membership and confirm it's still justified, catching the residual access that a role change leaves behind.
 In a fuller setup, PIM closes the last gap here any elevated admin role someone picked up for their old position is time-bound and expires, rather than following them into the new role.
 
-## Leave
+## Leaver
 When someone leaves, every door has to close, fast. A dormant but still enabled account is one of the most common ways breaches happen.
 I made this real rather than theoretical I disabled a departing user's account (Aisha Khan in Sales). The moment an account is disabled in Entra, authentication is blocked everywhere that identity connects. That's the power of centralizing identity: one action, and access is revoked across every connected app at once. Removing them from their groups strips group-based access in the same stroke, and Access Reviews act as the backstop that surfaces any account that *should* have been offboarded but slipped through.
 The real-world extension is SCIM again automated deprovisioning that deletes or disables the user's downstream app accounts the instant they're disabled in Entra, so nothing is left behind in a system someone forgot about.
