@@ -49,7 +49,7 @@ Everything above maps to the Joiner–Mover–Leaver model that underpins identi
 - **Mover:** changing a user's department attribute automatically shifts their group access; access reviews catch what role changes miss.
 - **Leaver:** disabling the account revokes access everywhere at once.
 
-Full write-up in JML-lifecycle.md.
+Full write-up in JML-lifecycle.md
 
 ## What I learned
 
