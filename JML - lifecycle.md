@@ -1,10 +1,10 @@
 # Joiner–Mover–Leaver (JML) Identity Lifecycle
-When I built this Entra environment, I kept coming back to one idea: every control I set up only makes sense as part of an identity's journey through the organization. A user joins, changes roles, and eventually leaves — and access has to keep pace at every step. That journey is the Joiner–Mover–Leaver model, and this is how I mapped each stage to what I actually built.
+When I built this Entra environment, I kept coming back to one idea: every control I set up only makes sense as part of an identity's journey through the organization. A user joins, changes roles, and eventually leaves and access has to keep pace at every step. That journey is the Joiner–Mover–Leaver model, and this is how I mapped each stage to what I actually built.
 
 ## Joiner
 
 When someone joins, they need an identity and the right baseline access straight away enough to do their job, nothing more.
-When I provisioned my users, I set their department and job title attributes deliberately, because that attribute data is what does the work later. A new IT hire lands in the `IT-Team-Dynamic` group automatically — I don't add them, the dynamic rule does, based on their department. They inherit the correct access the moment their account exists. And because I built the Conditional Access MFA policy across all users, they're covered by baseline security from their very first sign-in.
+When I provisioned my users, I set their department and job title attributes deliberately, because that attribute data is what does the work later. A new IT hire lands in the `IT-Team-Dynamic` group automatically, I don't add them the dynamic rule does based on their department. They inherit the correct access the moment their account exists. And because I built the Conditional Access MFA policy across all users, they're covered by baseline security from their very first sign-in.
 The piece I couldn't build on a trial tenant is SCIM provisioning in a real setup that would push the new identity straight into downstream apps like Slack or Salesforce at the moment of creation, so the joiner is fully set up everywhere without manual account-making.
 
 ## Mover
@@ -19,4 +19,4 @@ I made this real rather than theoretical I disabled a departing user's account (
 The real-world extension is SCIM again automated deprovisioning that deletes or disables the user's downstream app accounts the instant they're disabled in Entra, so nothing is left behind in a system someone forgot about.
 
 ## Why this framing matters to me
-Working through JML changed how I see the individual controls. Dynamic groups, Conditional Access, PIM, access reviews on their own they're just features. Strung along the lifecycle of a real person joining, moving, and leaving, they become a system. Most access-related breaches trace back to a broken point in this chain — usually a leaver who never lost access, or a mover who kept piling up privilege. Building identity around JML, with automation doing the routine work and detective controls catching what slips, is what separates a governed environment from a directory full of accounts nobody is watching.
+Working through JML changed how I see the individual controls. Dynamic groups, Conditional Access, PIM, access reviews on their own they're just features. Strung along the lifecycle of a real person joining, moving, and leaving, they become a system. Most access related breaches trace back to a broken point in this chain usually a leaver who never lost access, or a mover who kept piling up privilege. Building identity around JML, with automation doing the routine work and detective controls catching what slips, is what separates a governed environment from a directory full of accounts nobody is watching.
